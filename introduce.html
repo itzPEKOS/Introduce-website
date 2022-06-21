@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/4a0eae9d40.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduce | Phonlakrit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      * {
+        transition: all 0.2s;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Kdam Thmor Pro", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      img {
+        display: block;
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(32, 32, 32);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(32, 32, 32);
+        position: fixed;
+        width: 100%;
+      }
+
+      li a {
+        display: block;
+        color: rgb(235, 223, 63);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: rgb(0, 0, 0);
+      }
+
+      .logo {
+        margin: auto 1%;
+      }
+
+      i {
+        color: rgb(235, 223, 63);
+        font-size: 225%;
+      }
+
+      .go-Top {
+        color: #000000;
+        position: fixed;
+        display: block;
+        top: 90%;
+        right: 3rem;
+        display: block;
+        border-radius: 50%;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: yellow;
+        z-index: 100;
+        text-align: center;
+        font-size: 2rem;
+        padding: 0.65rem;
+      }
+
+      .go-Top:hover {
+        color: goldenrod;
+        background-color: white;
+      }
+
+      /*----------------------------------------------------------------------------------------------------------*/
+
+      .home {
+        background: url("img/background/backgroundhome.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 9rem;
+        height: 100vh;
+      }
+
+      .home img {
+        height: 50%;
+        border-radius: 50%;
+        margin: auto;
+        box-shadow: 0 2px 10px #000000;
+      }
+
+      .home .text {
+        margin: auto;
+        text-align: center;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      .home .wrapper {
+        display: table;
+        margin: 0 auto;
+      }
+
+      /*----------------------------------------------------------------------------------------------------------*/
+
+      .about {
+        background-color: rgb(0, 0, 0);
+        background-size: cover;
+        padding-top: 2rem;
+        height: 80vh;
+      }
+
+      .about h2 {
+        color: white;
+        text-align: center;
+        font-size: 250%;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      .about i {
+        color: white;
+        font-size: 100%;
+      }
+
+      .about span {
+        color: gold;
+        font-size: 100%;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      .about img {
+        height: 300px;
+        border-radius: 50%;
+        margin-left: 15rem;
+      }
+
+      .about img:hover {
+        height: 350px;
+        box-shadow: 0 0 50px #ffffff;
+      }
+
+      .about .wrapper {
+        padding-top: 10rem;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+      }
+
+      .about .inner-wrapper .text {
+        margin-right: 15rem;
+        display: flex;
+        font-family: "Roboto Condensed", sans-serif;
+        color: white;
+        font-size: 150%;
+      }
+
+      .about .inner-wrapper .text span {
+        color: gold;
+      }
+
+      .about .deb {
+        color: green;
+      }
+
+      .about .deb:hover {
+        color: yellow;
+      }
+
+      /*----------------------------------------------------------------------------------------------------------*/
+
+      .skills {
+        background: url("img/background/v748-toon-131.jpg");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        padding: 2rem;
+        height: 90vh;
+      }
+
+      .skills h2 {
+        color: gold;
+        text-align: center;
+        font-size: 250%;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      .skills i {
+        color: white;
+        font-size: 100%;
+      }
+
+      .github {
+        border-radius: 50%;
+      }
+
+      .skills-container {
+        padding: 6rem;
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .mySlides img {
+        height: 200px;
+        margin: auto;
+      }
+
+      .mySlides .text {
+        color: #f2f2f2;
+        font-size: 30px;
+        padding: 8px 12px;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 26px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #f0d769;
+      }
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(255, 215, 84, 0.8);
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media only screen and (max-width: 300px) {
+        .skills-container .text,
+        .prev,
+        .next {
+          font-size: 11px;
+        }
+      }
+
+      /*----------------------------------------------------------------------------------------------------------*/
+
+      .contact * {
+        color: rgb(0, 0, 0);
+      }
+
+      .contact {
+        background-color: goldenrod;
+        background-size: cover;
+        height: 40vh;
+        padding: 5rem;
+      }
+
+      .contact h2 {
+        text-align: center;
+        font-size: 250%;
+        font-family: "Kdam Thmor Pro", sans-serif;
+      }
+
+      .contact i {
+        font-size: 100%;
+      }
+
+      .contact .container i {
+        font-size: 100%;
+      }
+
+      .contact .container {
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+        align-items: center;
+      }
+
+      .contact > .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact .container i {
+        margin: auto 1rem;
+      }
+
+      .contact .icon {
+        display: flex;
+        justify-content: top;
+        align-items: center;
+        height: 10vh;
+      }
+
+      .contact .icon i {
+        font-size: 40px;
+        margin: auto 0.5rem;
+      }
+
+      .contact .icon i:hover {
+        color: white;
+      }
+
+      .contact hr {
+        border-color: rgb(0, 0, 0);
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact .credit {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .contact .credit a:hover {
+        color: white;
+      }
+
+      /* css end */
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo"><i class="fa-solid fa-laptop-code"></i></div>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <a href="#home"><i class="go-Top fa-solid fa-circle-arrow-up"></i></a>
+
+      <!-- home -->
+
+      <section class="home" id="home">
+        <img id="My-pic" src="/img/other/Phonlakrit.jpg" />
+        <div class="wrapper">
+          <div
+            class="text"
+            onmouseover="mOver1(this)"
+            onmouseout="mOut1(this)"
+            style="font-size: 300%; color: gold"
+          >
+            HELLO !!!
+          </div>
+          <div
+            class="text"
+            onmouseover="mOver2(this)"
+            onmouseout="mOut2(this)"
+            style="font-size: 250%; color: rgb(255, 255, 255)"
+          >
+            My name is Phonlakrit Chaengtamtham
+          </div>
+          <div
+            class="text"
+            onmouseover="mOver3(this)"
+            onmouseout="mOut3(this)"
+            style="font-size: 250%; color: rgb(255, 255, 255)"
+          >
+            My nickname is Pai
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+
+      <section class="about" id="about">
+        <h2 class="heading">
+          <i class="fa-solid fa-user"></i>
+          About
+          <span>Me</span>
+        </h2>
+        <div class="wrapper">
+          <div class="image"><img src="/img/other/gcp8sasaat121.jpg" /></div>
+          <div class="inner-wrapper">
+            <div class="text">
+              <span>Name : </span>
+              <p>Phonlakrit Chaengtamtham</p>
+            </div>
+            <div class="text">
+              <span> Nick Name : </span>
+              <p>Pai</p>
+            </div>
+            <div class="text">
+              <span>Birth Day : </span>
+              <p>5/6/2006</p>
+            </div>
+            <div class="text">
+              <span>School : </span>
+              <a class="deb" href="https://www.debsirin.ac.th/index.html"
+                >Debsirin School</a
+              >
+            </div>
+            <div class="text">
+              <span>Hobby : </span>
+              <p>write code, watch movies, listen to musics, play games</p>
+            </div>
+            <div class="text">
+              <span>Phone : </span>
+              <p>083-806-8861</p>
+            </div>
+            <div class="text">
+              <span>Email : </span>
+              <p>phonlakritc@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- skills -->
+
+      <section class="skills" id="skills">
+        <h2 class="heading">
+          <i class="fa-solid fa-code"></i>
+          SKILLS
+        </h2>
+
+        <div class="skills-container">
+          <div class="mySlides fade">
+            <img src="/img/Logo/HTML_Logo.png" />
+            <div class="text">HTML</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/img/Logo/CSS_Logo.png" />
+            <div class="text">CSS</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/img/Logo/JS_Logo.png" />
+            <div class="text">JavaScript</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/img/Logo/C_Logo.png" />
+            <div class="text">C language</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="/img/Logo/C++_Logo.png" />
+            <div class="text">C++ language</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="github" src="/img/Logo/GITHUB_Logo.png" />
+            <div class="text">GitHub</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+      </section>
+
+      <!-- contact -->
+
+      <section class="contact" id="contact">
+        <h2 class="heading">
+          <i class="fa-solid fa-address-card"></i>
+          CONTACT
+        </h2>
+        <div class="wrapper">
+          <div class="container">
+            <i class="fa-solid fa-phone"></i>
+            <p>083-806-8861</p>
+          </div>
+          <div class="container">
+            <i class="fa-solid fa-envelope"></i>
+            <p>phonlakritc@gmail.com</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="icon">
+            <a href="https://github.com/itzPEKOS">
+              <div class="icon-border">
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/pai.phonlakrit">
+              <div class="icon-border">
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/pplk_pai/">
+              <div class="icon-border">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="credit">
+          <a href="http://www.freepik.com">Designed by starline | Freepik</a>
+        </div>
+      </section>
+
+      <script>
+
+        //Animate Shadow
+
+        const pic = document.querySelector("#My-pic");
+        const walk = 100;
+
+        function shadow(e) {
+          const { offsetWidth: width, offsetHeight: height } = pic;
+          let { offsetX: x, offsetY: y } = e;
+
+          if (this !== e.target) {
+            x = x + e.target.offsetLeft;
+            y = y + e.target.offsetTop;
+          }
+
+          const xwalk = (x / width) * walk - walk / 2;
+          const ywalk = (y / height) * walk - walk / 2;
+
+          pic.style.boxShadow = `${xwalk}px ${ywalk}px 100px white`;
+        }
+
+        pic.addEventListener("mousemove", shadow);
+        pic.addEventListener("mouseleave", function () {
+          const pic = document.querySelector("#My-pic");
+          pic.style.boxShadow = "none";
+        });
+
+        //The onmouseover and onmouseout Events
+
+        function mOver1(obj) {
+          obj.innerHTML = "สวัสดีครับ !!!";
+        }
+
+        function mOut1(obj) {
+          obj.innerHTML = "HELLO !!!";
+        }
+
+        function mOver2(obj) {
+          obj.innerHTML = "ผมชื่อ นายพลกฤต แจ้งตามธรรม";
+        }
+
+        function mOut2(obj) {
+          obj.innerHTML = "My name is Phonlakrit Chaengtamtham";
+        }
+
+        function mOver3(obj) {
+          obj.innerHTML = "ชื่อเล่น ชื่อ ปาย";
+        }
+
+        function mOut3(obj) {
+          obj.innerHTML = "My nickname is Pai";
+        }
+
+        // slideshow
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    </div>
+  </body>
+</html>
